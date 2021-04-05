@@ -1,10 +1,10 @@
 <?php
 
 
-namespace controller;
-use model\fogModel;
+namespace staffAuthenticationContoller;
+//use model\fogModel;
 
-include_once '../model/fogModel.php';
+include_once '../../model/staffAuthenticationModel/fogModel.php';
 
 class forotPasswordController
 {
@@ -20,7 +20,7 @@ class forotPasswordController
         }
 
 
-        $this->fogMod=new \model\fogModel();
+        $this->fogMod=new \staffAuthenticationModel\fogModel();
         $this->fog2="";
     }
     public function addfog2(){
@@ -28,7 +28,7 @@ class forotPasswordController
     }
 
     private function otpCheck($otp){
-        session_start();
+//        session_start();
         if($_SESSION['otp']==$otp){
             return true;
         }else{
@@ -53,6 +53,7 @@ class forotPasswordController
         }
     }
     public function stablishPass($otp,$pass,$cPass){
+        echo $otp.", ".$pass.", ".$cPass;
         if(!$this->otpCheck($otp)){
             $this->fog2="otp is not valid";
             return;
@@ -61,17 +62,17 @@ class forotPasswordController
             $this->fog2="passwords are not matching";
             return;
         }
-        if ($this->checkEmpty($pass)){
+        if (!$this->checkEmpty($pass)){
             $this->fog2="password field is empty";
             return;
         }
 
-        if ($this->checkEmpty($cPass)){
+        if (!$this->checkEmpty($cPass)){
             $this->fog2="confirm password field is empty";
             return;
         }
 
-        if ($this->checkEmpty($otp)){
+        if (!$this->checkEmpty($otp)){
             $this->fog2="otp field is empty";
             return;
         }

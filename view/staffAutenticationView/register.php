@@ -1,7 +1,7 @@
 <?php
 
-include_once '../controller/regiController.php';
-$auth=new \controller\regiController();
+include_once '../../controller/staffAuthenticationContoller/regiController.php';
+$auth=new \staffAuthenticationContoller\regiController();
 if(isset($_POST['register'])){
     $roll=isset($_POST['roll']) ? $_POST['roll']: 10;
     $auth->register($_POST['name'],$_POST['username'],$_POST['email'],$_POST['tel'],$_POST['pass'],$_POST['cPass'],$roll,$_POST['otp']);

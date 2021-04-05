@@ -1,7 +1,7 @@
 <?php
 
 
-namespace model;
+namespace staffAuthenticationModel;
 include_once 'dbConn/Database.php';
 
 class fogModel extends \dbConn\Database

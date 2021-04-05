@@ -1,10 +1,12 @@
 <?php
 
 
-namespace controller;
+namespace staffAuthenticationContoller;
 //use model\regiModel;
 
-include_once '../model/regiModel.php';
+//use staffAuthenticationModel\regiModel;
+
+include_once '../../model/staffAuthenticationModel/regiModel.php';
 
 class regiController
 {
@@ -14,7 +16,7 @@ class regiController
     private $fog1;
     public function __construct()
     {
-        $this->regMod=new \model\regiModel();
+        $this->regMod=new \staffAuthenticationModel\regiModel();
         session_start();
         $this->regModms="";
         $this->fog1="";
@@ -225,6 +227,9 @@ class regiController
 //    public function addfog2(){
 //        echo "<p>".$this->fog2."</p>";
 //    }
+    public function setMessagefog1(){
+        echo "<p>".$this->fog1."</p>";
+    }
 
     public function forgNext($username){
         if(!$this->checkEmpty($username)){
@@ -245,6 +250,7 @@ class regiController
         $this->sendOtp($emails);
         $_SESSION['username']=$username;
 //        echo $orEmails;
+//        session_destroy();
         header("location: enterOtp.php");
     }
 }

@@ -1,8 +1,9 @@
 <?php
-include_once '../controller/regiController.php';
-include_once '../controller/forotPasswordController.php';
+//include_once '../controller/regiController.php';
+//include_once '../controller/forotPasswordController.php';
+include_once '../../controller/staffAuthenticationContoller/forotPasswordController.php';
 //$regcon=new \controller\regiController();
-$reccon2=new \controller\forotPasswordController();
+$reccon2=new \staffAuthenticationContoller\forotPasswordController();
 
 
 if(isset($_POST['confir'])){

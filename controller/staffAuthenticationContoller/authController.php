@@ -1,13 +1,15 @@
 <?php
 
-namespace controller;
- include_once '../model/authModel.php';
+namespace staffAuthenticationContoller;
+ use staffAuthenticationModel\authModel;
+
+ include_once '../../model/staffAuthenticationModel/authModel.php';
 //use model\authModel;
 
 class authController{
     public $model;
     public function __construct(){
-        $this->model=new \model\authModel();
+        $this->model=new \staffAuthenticationModel\authModel();
     }
 ////////start login part
     public function checkEmptyPass($password){

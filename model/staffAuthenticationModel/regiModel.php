@@ -1,7 +1,7 @@
 <?php
 
 
-namespace model;
+namespace staffAuthenticationModel;
 use Cassandra\Date;
 
 include_once 'dbConn/Database.php';

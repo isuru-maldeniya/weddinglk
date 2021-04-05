@@ -1,7 +1,7 @@
 <?php
 
-include_once '../controller/authController.php';
-$auth= new \controller\authController();
+include_once '../../controller/staffAuthenticationContoller/authController.php';
+$auth= new \staffAuthenticationContoller\authController();
 // $auth->logn();
 
 //use controller\Authenticationmod;

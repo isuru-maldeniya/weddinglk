@@ -1,6 +1,7 @@
 <?php
-include_once '../controller/regiController.php';
-$contro=new \controller\regiController();
+//include_once '../controller/regiController.php';
+include_once '../../controller/staffAuthenticationContoller/regiController.php';
+$contro=new \staffAuthenticationContoller\regiController();
 if(isset($_POST['next'])){
     $contro->forgNext($_POST['username']);
 }
@@ -19,7 +20,10 @@ if(isset($_POST['next'])){
 
 </head>
 <body>
+<?php $contro->setMessagefog1();?>
 <h1>you are in forgot password</h1>
+
+
 
 <form action="forgotPassword.php" method="post">
     <label for="username">name</label>
