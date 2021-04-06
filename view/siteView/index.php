@@ -126,8 +126,90 @@
             background-color: transparent;
             text-decoration: underline;
         }
+        .imgDiv{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            /*background-color: #0e7d8b;*/
 
+            background-image: url("images/choice3-1500310473.jpg");
+            /*background-position: center; !* Center the image *!*/
+            /*background-repeat: no-repeat; !* Do not repeat the image *!*/
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+
+        .quoteByeditor{
+            top: 35px;
+            left: 4%;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #dddddd;
+            opacity: 0.8;
+            border-radius: 20%;
+            border: 4px solid hotpink;
+        }
+        .loginDiv{
+            position: absolute;
+            top: 45px;
+            right: 4%;
+            width: 400px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 20%;
+            border: 4px solid hotpink;
+            /*opacity: 0.5;*/
+        }
+        .txtField{
+            /*position: absolute;*/
+            width: 200px;
+            left: 85px;
+            margin: 15px 15px 0px 15px;
+            height: 25px;
+            position: relative;
+            border: 1px solid hotpink;
+            border-radius: 30px;
+            text-align: center;
+            color: hotpink;
+            caret-color: auto;
+
+
+        }
+        .form_header{
+            position: relative;
+            color: hotpink;
+            text-align: center;
+            width: 200px;
+            left: 100px;
+        }
+
+        .txtField::placeholder{
+            color: hotpink;
+            text-align: center;
+            opacity: 0.1;
+        }
+        .txtField:focus{
+            /*border: 1px;*/
+            outline: pink;
+        }
+        .fromdiv{
+            position: absolute;
+
+        }
+        .btn{
+            width: 150px;
+            margin: 15px 0px 0px 0px;
+            position: relative;
+            left: 125px;
+        }
+        .lab{
+            position: relative;
+            alignment: center;
+            width: 200px;
+            left: 100px;
+        }
     </style>
+    <script src="siteJS/index.js"></script>
 </head>
 <body>
 <div id="mBody">
@@ -153,7 +235,26 @@
             </ul>
         </div>
     </div>
-    <div></div>
+    <div class="imgDiv">
+        <div class="quoteByeditor"></div>
+        <div class="loginDiv">
+            <div class="fromdiv">
+                <form action="index.php" method="post">
+                    <h1 class="form_header">login</h1>
+                    <br>
+                    <input class="txtField" type="text" placeholder="username"><br>
+                    <label class="lab">label</label><br>
+                    <input type="password" class="txtField" placeholder="password"><br>
+                    <label class="lab">label</label><br>
+                    <input type="submit" class="btn" value="login">
+                    <br>
+                    <button type="button" class="btn">sign up</button>
+                    <br>
+                    <button type="button" class="btn">forgot password</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
