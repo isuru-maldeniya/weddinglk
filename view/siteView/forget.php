@@ -1,6 +1,6 @@
 <?php?>
 <form action="index.php" method="post">
-    <h1 class="form_header">login</h1>
+    <h1 class="form_header">forget Password</h1>
     <br>
     <input class="txtField" type="text" placeholder="username"><br>
     <label class="lab">label</label><br>

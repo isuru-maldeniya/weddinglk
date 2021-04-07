@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-
+    <script src="siteJS/jquey.js"></script>
     <style>
         *{
             margin: 0;
@@ -246,11 +246,11 @@
                     <label class="lab">label</label><br>
                     <input type="password" class="txtField" placeholder="password"><br>
                     <label class="lab">label</label><br>
-                    <input type="submit" class="btn" value="login">
+                    <input type="submit" class="btn logBtn" value="login">
                     <br>
                     <button type="button" class="btn">sign up</button>
                     <br>
-                    <button type="button" class="btn">forgot password</button>
+                    <button type="button" class="btn forgPass">forgot password</button>
                 </form>
             </div>
         </div>
