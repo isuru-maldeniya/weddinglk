@@ -129,6 +129,58 @@ if (isset($_POST['fPassword'])){
         .headerdiv{
 
         }
+        .fgBtn:hover{
+            color: #50afa2;
+        }
+        .fgBtn:focus{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: #00ff00;
+        }
+        .btnlogin:hover{
+            cursor: pointer;
+            -webkit-box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+            box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+        }
+        .btnlogin:focus{
+            border: none;
+            outline: none;
+            background-image: linear-gradient(to right, #65d2c3, #5fddb3, #71e699, #93ec77, #bdee4e);
+        }
+        .btnreg:focus{
+            /*border: none;*/
+            outline: none;
+            border: 2px solid #50afa2;
+            color: #50afa2;
+        }
+        .btnreg:hover{
+            -webkit-box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+            box-shadow: -7px 26px 133px 0px rgba(0,0,0,0.75);
+        }
+        .txtField:hover{
+            border-bottom: 2px solid #50afa2;
+        }
+        .txtField::placeholder{
+            /*text-align: center;*/
+        }
+        .warn{
+            position: relative;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            color: #ED4337;
+            font-size: 15px;
+        }
+        .warn p{
+            margin-top: 0;
+        }
+        .txtField:focus{
+            outline: none;
+
+        }
     </style>
 </head>
 <body style="background-color: #1c1c1c">
@@ -138,14 +190,16 @@ if (isset($_POST['fPassword'])){
             <div class="headerdiv">
 
                 <input type="submit" value="register" class="btnreg" name="register"><br>
-                <div><?php $auth->setMsg(); ?></div>
+
             </div>
 
 
             <div class="centerDiv">
                 <div class="filler"></div>
                 <h1>Staff Login</h1>
+
                 <label class="lab">welcome to the WeddingsLk!did you forget<br> the password? <input type="submit" value="click here to reset" class="fgBtn" name="fPassword"><br><br></label>
+                <div class="warn"><?php $auth->setMsg(); ?></div>
                 <input type="text" name="username" class="txtField" placeholder="username">
                 <br><br>
                 <input type="password" name="password" class="txtField" placeholder="password">
