@@ -179,7 +179,6 @@ if (isset($_POST['fPassword'])){
         }
         .txtField:focus{
             outline: none;
-
         }
     </style>
 </head>
