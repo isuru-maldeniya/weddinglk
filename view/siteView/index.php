@@ -248,7 +248,7 @@
                     <label class="lab">label</label><br>
                     <input type="submit" class="btn logBtn" value="login">
                     <br>
-                    <button type="button" class="btn">sign up</button>
+                    <button type="button" class="btn signupbtn">sign up</button>
                     <br>
                     <button type="button" class="btn forgPass">forgot password</button>
                 </form>

@@ -3,4 +3,8 @@ $(document).ready(function () {
         $('.fromdiv').load('forget.php');
         }
     );
+
+    $('.signupbtn').click(function () {
+        $('.fromdiv').load('register.php');
+    });
 });

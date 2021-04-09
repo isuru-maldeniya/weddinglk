@@ -7,8 +7,10 @@ namespace staffAuthenticationContoller;
 //use model\authModel;
 
 class authController{
+    private $message;
     public $model;
     public function __construct(){
+        $this->message="";
         $this->model=new \staffAuthenticationModel\authModel();
     }
 ////////start login part
@@ -37,17 +39,30 @@ class authController{
 
     }
     public function login($username,$password){
+        if(!$this->checkEmptyPass($password)){
+            $this->message="password field is empty";
+            return;
+        }
+        if(!$this->checkEmptyPass($username)){
+            $this->message="username field is empty";
+            return;
+        }
 
         if (!$this->checkUserNameAndPassword($username,$password)){
             //send JS message that empty credential
+            $this->message="incorrect details";
             return;
         }
 
         if($this->model->login($username,md5($password))){
             header("Location: firstview.php");
         }else{
+            $this->message="incorrect details";
             return;
         }
+    }
+    public function setMsg(){
+        echo "<p>".$this->message."</p>";
     }
 /////////////////////end of login part
 
@@ -55,6 +70,7 @@ class authController{
     public function register(){
         header("Location: register.php");
     }
+
 
     public function fPassword(){
         header("Location: forgotPassword.php");

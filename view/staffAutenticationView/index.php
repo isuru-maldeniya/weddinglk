@@ -27,26 +27,135 @@ if (isset($_POST['fPassword'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato&display=swap" rel="stylesheet">
+
+    <title>staff Login</title>
+    <style>
+        *{
+            border: 0px;
+            padding: 0px;
+        }
+        .tempBody{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("image/pexels-flo-dahm-458917.jpg ");
+        }
+
+        h1{
+            text-align: center;
+            font-family: 'Dela Gothic One', cursive;
+            font-family: 'Dela Gothic One', cursive;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .btnreg{
+            position: relative;
+            top: 10px;
+            /*left: 0;*/
+            right: 0;
+            width: 130px;
+            height: 30px;
+            border-radius: 30px;
+            margin-left: 87%;
+            text-align: center;
+            alignment: left;
+            display: inline;
+            background: transparent;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+        }
+        .txtField{
+            height: 30px;
+            display: block;
+            position: relative;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid #009879;
+            width: 300px;
+            /*alignment: center;*/
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .centerDiv{
+            position: relative;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+
+        }
+        .filler{
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+        .btnlogin{
+            position: relative;
+            left: 0;
+            right: 0;
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            alignment: center;
+            display: block;
+            /*background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
+            background-image: linear-gradient(to right, #50afa2, #3ac299, #49d381, #73e15b, #a8eb12);
+        }
+        .lab{
+            text-align: center;
+            position: relative;
+            display: block;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .fgBtn{
+            background: transparent;
+            color: #009879;
+        }
+        .headerdiv{
+
+        }
+    </style>
 </head>
-<body>
-<div>
-<?//echo 'checking'. var_dump(file_exists($ENGINE."/controller/authController.php"));?><!--    -->
+<body style="background-color: #1c1c1c">
+<div class="tempBody">
+
+        <form action="index.php" method="post">
+            <div class="headerdiv">
+
+                <input type="submit" value="register" class="btnreg" name="register"><br>
+                <div><?php $auth->setMsg(); ?></div>
+            </div>
+
+
+            <div class="centerDiv">
+                <div class="filler"></div>
+                <h1>Staff Login</h1>
+                <label class="lab">welcome to the WeddingsLk!did you forget<br> the password? <input type="submit" value="click here to reset" class="fgBtn" name="fPassword"><br><br></label>
+                <input type="text" name="username" class="txtField" placeholder="username">
+                <br><br>
+                <input type="password" name="password" class="txtField" placeholder="password">
+                <br><br>
+                <input type="submit" value="login" class="btnlogin" name="login"><br>
+            </div>
+
+
+        </form>
+
 </div>
-
-
-    <form action="index.php" method="post">
-        <label for="username">username</label>
-        <input type="text" name="username" placeholder="username">
-        <br><br>
-        <label for="password">password</label>
-        <input type="text" name="password" placeholder="password">
-        <br><br>
-
-        <input type="submit" value="login" name="login"><br>
-        <input type="submit" value="register" name="register">
-        <input type="submit" value="forgot password" name="fPassword">
-
-    </form>
 </body>
 </html>
