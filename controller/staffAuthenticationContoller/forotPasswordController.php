@@ -53,7 +53,7 @@ class forotPasswordController
         }
     }
     public function stablishPass($otp,$pass,$cPass){
-        echo $otp.", ".$pass.", ".$cPass;
+//        echo $otp.", ".$pass.", ".$cPass;
         if(!$this->otpCheck($otp)){
             $this->fog2="otp is not valid";
             return;
