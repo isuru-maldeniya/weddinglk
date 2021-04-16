@@ -143,9 +143,157 @@
             text-align: center;
         }
         .roadMap{
-            width: 100%;
+            margin: 0px 30px 20px 30px;
+            /*width: 100%;*/
             min-height: 300px;
             background-color: #ffcff4;
+            border: 3px solid #b6a0a0;
+            border-radius: 30px;
+        }
+        .nev h2{
+            position: relative;
+            top: 5px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            display: inline-block;
+            color: #ffffff;
+            padding-left: 10px;
+            padding-right: 10px;
+            /*padding-bottom: 10px;*/
+
+        }
+        .nev{
+            position: relative;
+            padding-bottom: 20px;
+            height: 20px;
+            display: inline-block;
+            background-color: #ff34cf;
+            border-radius: 8px;
+            margin: 20px;
+
+        }
+        .num1{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number1.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .num2{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number2.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .num3{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number3.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .num4{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number4.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .num5{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number5.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .num6{
+
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            width: 24px;
+            height: 24px;
+            background-image: url("images/number6.png");
+            background-size: cover;
+            /*margin-top: 10px;*/
+        }
+        .arrow{
+            position: relative;
+            width: 32px;
+            height: 32px;
+            background-image: url("images/down-arrow.png");
+        }
+        .nev1{
+            margin-left: 50px;
+        }
+        .nev2{
+            margin-left: 200px;
+        }
+        .arr1{
+            margin-left: 220px;
+        }
+        .nev3{
+            margin-left: 380px;
+        }
+        .arr2{
+            margin-left: 400px;
+        }
+        .nev4{
+            margin-left: 410px;
+        }
+        .arr3{
+            margin-left: 500px;
+        }
+        .arr4{
+            margin-left: 460px;
+        }
+        .nev5{
+            margin-left: 390px;
+        }
+        .arr5{
+            margin-left: 400px;
+        }
+        .nev6{
+            margin-left: 100px;
         }
     </style>
 </head>
@@ -228,6 +376,37 @@
         <h2>How you can Plan Your Wedding, Learn it step by step</h2>
     </div>
     <div class="roadMap">
+        <div class="nev nev1">
+            <div class="num1"></div>
+            <h2>sign up and login</h2>
+        </div>
+        <div class="arrow arr1"></div>
+        <div class="nev nev2">
+            <div class="num2"></div>
+            <h2>Check out our services, Vendors and our Wedding Plans</h2>
+        </div>
+        <div class="arrow arr2"></div>
+        <div class="nev nev3">
+            <div class="num3"></div>
+            <h2>Meet your wedding organizer</h2>
+        </div>
+        <div class="arrow arr3"></div>
+        <div class="nev nev4">
+            <div class="num4"></div>
+            <h2>Confirm and buy services and vendors</h2>
+        </div>
+        <div class="arrow arr4"></div>
+        <div class="nev nev5">
+            <div class="num5"></div>
+            <h2>Manage your service and vendors</h2>
+        </div>
+        <div class="arrow arr5"></div>
+        <div class="nev nev6">
+            <div class="num6"></div>
+            <h2>View the progress of your wedding</h2>
+        </div>
+
+
 
     </div>
 </body>
