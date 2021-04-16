@@ -1,260 +1,234 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../commonCSS/normalize.css">
-    <link rel="stylesheet" href="CSS/indexCSS.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-    <script src="siteJS/jquey.js"></script>
     <style>
         *{
+            padding: 0;
             margin: 0;
-            padding: 0;
         }
-        .head{
-            left: 0;
-            right: 0;
-            margin: auto;
-            padding: 0;
-            position: relative;
-            width: 80%;
-            height: 70px;
-            background-image: linear-gradient(to bottom, #f83ffc, #ee53f5, #e563ee, #dc6fe6, #d379de);
-            /*background-color: #ffb0e1;*/
-        }
-        .verSep{
-
-            /*border-top: 2px;*/
-            top: 8px;
-            bottom: 10px;
-            margin: auto;
-            border-left: 3px solid #ffffff;
-            /*height: 42px;*/
-            position:absolute;
-            left: 37%;
-            height: 62px;
-            display: inline-block;
-            bottom: 2px;
-        }
-        .headTopic{
-
-            position: absolute;
-            font-size: 25px;
-            font-family: 'Courgette', cursive;
-            top: 12px;
-            text-shadow: -2px 4px 1px rgba(255,255,255,0.68);
-            color: #E5179F;
-            width: 35%;
-            left: 1%;
-            display: inline-block;
-            alignment: right;
-            height: 50px;
-
-        }
-        .topic{
-            text-align: right;
-            margin-bottom: 0px;
-
-
-        }
-        .headQuote{
-            /*padding-bottom: 1rem;*/
-            /*padding-top: 1rem;*/
-            top: 30px;
-            position: absolute;
-            color: #ffffff;
-            right: 1%;
-            width: 61%;
-            display: inline-block;
-            text-shadow: -2px 3px 3px rgba(255,255,255,0.5);
-            /*font-family: 'Sue Ellen Francisco', cursive;*/
-            font-family: 'Sofia', cursive;
-        }
-        .headerList{
-            list-style-type: none;
-        }
-        .hl{
-            display: inline-block;
-            width: 13.9%;
-            text-align: center;
-            padding-top: 0.5em;
-        }
-        .hlContainer{
-            position: relative;
-            margin-top: 5px;
-            height: 35px;
+        nav{
             width: 100%;
-            border-top: 2px solid #485855;
-            border-bottom: 2px solid #485855;
+            height: 75px;
+            /*background-color: #0e7d8b;*/
         }
-        .innerhlcontainer{
+        nav h1{
+            font-size: 30px;
+            padding: 10px;
+            display: inline;
+            float: left;
+        }
+        nav ul{
+            float: left;
+        }
+        nav ul li{
+            padding: 20px;
+            float: left;
+            list-style: none;
             position: relative;
-            width: 80%;
-            left: 0;
-            right: 0;
-            height: 34px;
-            margin: auto;
         }
-        .headerLink{
+        nav ul li a{
+            display: block;
             text-decoration: none;
-            text-decoration-color: gray;
+            color: #1c1c1c;
         }
-        .headerLink:link {
-            color: green;
-            background-color: transparent;
-            text-decoration: none;
+        nav ul li a:hover{
+            color: #ff00c3;
+        }
+        nav ul li ul{
+            background-color: #ffffff;
+            display: none;
+            /*text-decoration: none;*/
+            position: absolute;
+            padding: 10px;
+            border-radius: 0px 0px 20px 20px;
         }
 
-        .headerLink:visited {
-            color: pink;
-            background-color: transparent;
-            text-decoration: none;
+        nav ul li:hover ul{
+            display: block;
+            /*text-decoration: none;*/
+            position: absolute;
+            padding: 0px;
         }
 
-        .headerLink:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
+        nav ul li ul li a{
+            padding: 0px 4px;
+            color: #1c1c1c;
         }
 
-        .headerLink:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
+        nav ul li ul li{
+            width: 180px;
+            padding: 8px 14px;
         }
-        .imgDiv{
+        nav ul li ul li a:hover{
+            color: #ff00c3;
+        }
+
+        .authContainer{
             position: relative;
+            float: right;
+            /*margin: 20px;*/
+        }
+        .wall{
+
+            background-image: url("images/NewProject.png");
             width: 100%;
             height: 500px;
-            /*background-color: #0e7d8b;*/
-
-            background-image: url("images/choice3-1500310473.jpg");
-            /*background-position: center; !* Center the image *!*/
-            /*background-repeat: no-repeat; !* Do not repeat the image *!*/
-            background-size: cover; /* Resize the background image to cover the entire container */
-        }
-
-        .quoteByeditor{
-            top: 35px;
-            left: 4%;
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background-color: #dddddd;
-            opacity: 0.8;
-            border-radius: 20%;
-            border: 4px solid hotpink;
-        }
-        .loginDiv{
-            position: absolute;
-            top: 45px;
-            right: 4%;
-            width: 400px;
-            height: 400px;
-            background-color: #ffffff;
-            border-radius: 20%;
-            border: 4px solid hotpink;
-            /*opacity: 0.5;*/
-        }
-        .txtField{
-            /*position: absolute;*/
-            width: 200px;
-            left: 85px;
-            margin: 15px 15px 0px 15px;
-            height: 25px;
-            position: relative;
-            border: 1px solid hotpink;
-            border-radius: 30px;
-            text-align: center;
-            color: hotpink;
-            caret-color: auto;
-
-
-        }
-        .form_header{
-            position: relative;
-            color: hotpink;
-            text-align: center;
-            width: 200px;
-            left: 100px;
-        }
-
-        .txtField::placeholder{
-            color: hotpink;
-            text-align: center;
-            opacity: 0.1;
-        }
-        .txtField:focus{
-            /*border: 1px;*/
-            outline: pink;
-        }
-        .fromdiv{
-            position: absolute;
-
         }
         .btn{
-            width: 150px;
-            margin: 15px 0px 0px 0px;
             position: relative;
-            left: 125px;
+            border: 2px solid #2e99ff ;
+            width: 70px;
+            border-radius: 3px;
+            background-color: #daefff;
+            top: 22px;
+            /*bottom: 0;*/
+            margin: auto;
         }
-        .lab{
+        .pProf{
             position: relative;
-            alignment: center;
-            width: 200px;
-            left: 100px;
+            top: 15px;
+            border-radius: 90%;
+            width: 40px;
+            height: 40px;
+            background-color: #0e7d8b;
+            float: right;
+            margin: 0px 10px 40px 10px;
+            background-image: url("images/profile-user.png");
+            background-size: cover;
+            /*margin-left: 10px;*/
+        }
+        .quote{
+            color: #a8888e;
+            /*float: right;*/
+            width: 100%;
+            margin-right: 20px;
+            text-align: right;
+            float: right;
+        }
+        .filler{
+            height: 300px;
+        }
+        .butDiv{
+            text-align: center;
+            /*alignment: center;*/
+        }
+        .hostBtn{
+            /*width: 40px;*/
+            height: 40px;
+            width: 250px;
+            border-radius: 7px;
+            background-color: #ea6fb4;
+            color: #f392e6;
+            font-size: 20px;
+            border: 1px solid #eacdca;
+            opacity: 0.8;
+        }
+        .quat{
+            text-align: center;
+            color: #dddddd;
+        }
+        .hostBtn:focus{
+            /*border: none;*/
+            outline: none;
+            background-color: #eacdca;
+
+        }
+        .guide{
+            margin: 20px 0px 20px 0px;
+            text-align: center;
+        }
+        .roadMap{
+            width: 100%;
+            min-height: 300px;
+            background-color: #ffcff4;
         }
     </style>
-    <script src="siteJS/index.js"></script>
 </head>
 <body>
-<div id="mBody">
-    <div>
-        <div class="head">
-            <div class="headTopic"><h2 class="topic">Weddingslk....</h2></div>
-            <div class="verSep"></div>
-            <div class="headQuote"><h5>Colourful life with <br> unbelievable Creativity</h5></div>
-        </div>
-    </div>
-    <div class="hlContainer">
-        <div class="innerhlcontainer">
+    <nav>
+        <h1>WeddingLk...</h1>
+        <ul>
+            <li><a href="#">Planning</a>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Wedding Plans</a></li>
+                    <li><a href="#">Company Bunches</a></li>
+                    <li><a href="#">Outside Plans</a></li>
+                    <li><a href="#">Flexi Plans</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Vendors</a>
 
-            <ul class="headerList">
-                <li class="hl"><a class="headerLink" href="">Home</a></li>
-                <li class="hl"><a class="headerLink" href="">service</a></li>
-                <li class="hl"><a class="headerLink" href="">Companies</a></li>
-                <li class="hl"><a class="headerLink" href="">Teams</a></li>
-                <li class="hl"><a class="headerLink" href="">Galleries</a></li>
-                <li class="hl"><a class="headerLink" href="">press</a></li>
-                <li class="hl"><a class="headerLink" href="">contact</a></li>
+            </li>
+            <li><a href="#">Galerries</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a>
+<!--                <ul>-->
+<!--                    <li><a href="#">Our Shops</a></li>-->
+<!--                    <li><a href="#">Venues</a></li>-->
+<!--                    <li><a href="#">Decorations</a></li>-->
+<!--                    <li><a href="#">Wears</a></li>-->
+<!--                    <li><a href="#">Boutiques</a></li>-->
+<!--                    <li><a href="#">Stationaries</a></li>-->
+<!--                </ul>-->
+            </li>
+            <li><a href="#">Service</a>
+                <ul>
+<!--                    <li><a href="#"></a></li>-->
+                    <ul>
+                        <li><a href="#">Venue</a></li>
+                        <li><a href="#">Decorations</a></li>
+                        <li><a href="#">Wears</a></li>
+                        <li><a href="#">Bouquets</a></li>
+                        <li><a href="#">Stationaries</a></li>
+                        <li><a href="#">Beauticians</a></li>
+                        <li><a href="#">Requirements</a></li>
+                        <li><a href="#">Cakes</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Transport</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Planning</a></li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="authContainer">
+            <form action="index.php" method="post">
+                <input class="btn" type="submit" value="Sign up">
+                <input class="btn" type="submit" value="Sign in">
+                <div class="pProf"></div>
+            </form>
 
-            </ul>
         </div>
-    </div>
-    <div class="imgDiv">
-        <div class="quoteByeditor"></div>
-        <div class="loginDiv">
-            <div class="fromdiv">
-                <form action="index.php" method="post">
-                    <h1 class="form_header">login</h1>
-                    <br>
-                    <input class="txtField" type="text" placeholder="username"><br>
-                    <label class="lab">label</label><br>
-                    <input type="password" class="txtField" placeholder="password"><br>
-                    <label class="lab">label</label><br>
-                    <input type="submit" class="btn logBtn" value="login">
-                    <br>
-                    <button type="button" class="btn signupbtn">sign up</button>
-                    <br>
-                    <button type="button" class="btn forgPass">forgot password</button>
-                </form>
-            </div>
+    </nav>
+    <div class="wall">
+        <div class="filler"></div>
+        <div class="quote">
+            <h3>I appreciate you getting this to me, so quickly</h3>
+<!--            <br>-->
+            <h3>I have time to enjoy my life.</h3>
+<!--            <br>-->
+            <h3>-Kasun-</h3>
         </div>
+        <br>
+        <div class="butDiv">
+            <input type="button" class="hostBtn" value="Host Your Wedding">
+        </div>
+        <br>
+        <div class="quat"><h5>comfortably plan the most valuable day of your lif with us.</h5></div>
     </div>
-</div>
+
+    <div class="guide">
+        <h2>How you can Plan Your Wedding, Learn it step by step</h2>
+    </div>
+    <div class="roadMap">
+
+    </div>
 </body>
 </html>

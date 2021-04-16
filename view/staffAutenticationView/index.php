@@ -10,9 +10,9 @@ $auth= new \staffAuthenticationContoller\authController();
 if(isset($_POST['login'])){
     $auth->login($_POST['username'],$_POST['password']);
 }
- if (isset($_POST['register'])){
+if (isset($_POST['register'])){
     $auth->register();
- }
+}
 
 if (isset($_POST['fPassword'])){
     $auth->fPassword();
@@ -185,29 +185,29 @@ if (isset($_POST['fPassword'])){
 <body style="background-color: #1c1c1c">
 <div class="tempBody">
 
-        <form action="index.php" method="post">
-            <div class="headerdiv">
+    <form action="index.php" method="post">
+        <div class="headerdiv">
 
-                <input type="submit" value="register" class="btnreg" name="register"><br>
+            <input type="submit" value="register" class="btnreg" name="register"><br>
 
-            </div>
-
-
-            <div class="centerDiv">
-                <div class="filler"></div>
-                <h1>Staff Login</h1>
-
-                <label class="lab">welcome to the WeddingsLk!did you forget<br> the password? <input type="submit" value="click here to reset" class="fgBtn" name="fPassword"><br><br></label>
-                <div class="warn"><?php $auth->setMsg(); ?></div>
-                <input type="text" name="username" class="txtField" placeholder="username">
-                <br><br>
-                <input type="password" name="password" class="txtField" placeholder="password">
-                <br><br>
-                <input type="submit" value="login" class="btnlogin" name="login"><br>
-            </div>
+        </div>
 
 
-        </form>
+        <div class="centerDiv">
+            <div class="filler"></div>
+            <h1>Staff Login</h1>
+
+            <label class="lab">welcome to the WeddingsLk!did you forget<br> the password? <input type="submit" value="click here to reset" class="fgBtn" name="fPassword"><br><br></label>
+            <div class="warn"><?php $auth->setMsg(); ?></div>
+            <input type="text" name="username" class="txtField" placeholder="username">
+            <br><br>
+            <input type="password" name="password" class="txtField" placeholder="password">
+            <br><br>
+            <input type="submit" value="login" class="btnlogin" name="login"><br>
+        </div>
+
+
+    </form>
 
 </div>
 </body>
